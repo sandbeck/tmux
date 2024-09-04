@@ -1,0 +1,14 @@
+import = ["~/.config/alacritty/tokyo-night.toml"]
+
+[font]
+normal = { family = "CaskaydiaMono Nerd Font", style = "Light" }
+bold = { family = "CaskaydiaMono Nerd Font", style = "Regular" }
+italic = { family = "CaskaydiaMono Nerd Font", style = "Light Italic" }
+
+size = 15
+
+[window]
+opacity = 0.9
+
+[scrolling]
+history = 100000
