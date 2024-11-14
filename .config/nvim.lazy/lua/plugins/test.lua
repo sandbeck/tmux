@@ -1,19 +1,14 @@
 return {
-  {
-    "nvim-neotest/neotest",
-    dependencies = {
-      "nvim-neotest/neotest-jest",
-      "haydenmeade/neotest-jest",
-    },
-    opts = function(_, opts)
-      table.insert(
-        opts.adapters,
-        require("neotest-jest")({
-          jestCommand = "yarn jest",
-          jestConfigFile = "jest.config.ts",
-          env = { CI = true },
-        })
-      )
-    end,
+  "vim-test/vim-test",
+  dependencies = {
+    "preservim/vimux",
   },
+  config = function()
+    vim.keymap.set("n", "<leader>tr", ":TestNearest<CR>", { desc = "Run nearest" })
+    vim.keymap.set("n", "<leader>tt", ":TestFile<CR>", { desc = "Run file" })
+    vim.keymap.set("n", "<leader>ts", ":TestSuite<CR>", { desc = "Run suite" })
+    vim.keymap.set("n", "<leader>tl", ":TestLast<CR>", { desc = "Run last" })
+    vim.keymap.set("n", "<leader>tv", ":TestVisit<CR>", { desc = "Visit" })
+    vim.cmd("let test#strategy = 'vimux'")
+  end,
 }
