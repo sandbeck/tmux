@@ -7,6 +7,45 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  // General
+  "show_inline_completions": false,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+
+  // UI
+  "ui_font_family": "CaskaydiaMono Nerd Font",
+  "buffer_font_family": "CaskaydiaMono Nerd Font",
+  "cursor_blink": false,
+  "relative_line_numbers": true,
+  "vim_mode": true,
+  "ui_font_size": 15,
+  "buffer_font_size": 15,
+  "buffer_font_weight": 300,
+  "project_panel": {
+    "indent_size": 12
+  },
+  "outline_panel": {
+    "indent_size": 12
+  },
+  "terminal": {
+    "font_weight": 300
+  },
+  "theme": {
+    "mode": "system",
+    "dark": "Catppuccin Mocha - No Italics",
+    "light": "Catppuccin Frappé - No Italics"
+  },
+  "experimental.theme_overrides": {
+    "border.variant": "#ffffff25",
+    "scrollbar.thumb.background": "#70709725"
+  },
+  "indent_guides": {
+    "coloring": "indent_aware"
+  },
+
+  // Assistant
   "assistant": {
     "default_model": {
       "provider": "zed.dev",
@@ -14,16 +53,22 @@
     },
     "version": "2"
   },
-  "telemetry": {
-    "metrics": false
-  },
-  "vim_mode": true,
-  "ui_font_size": 15,
-  "buffer_font_size": 15,
-  "buffer_font_weight": 300,
-  "relative_line_numbers": true,
-  "buffer_font_family": "CaskaydiaMono Nerd Font",
-  "terminal": {
-    "font_weight": 300
+
+  // LSP & Formatting
+  "format_on_save": "prettier",
+  "languages": {
+    "TypeScript": {
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true,
+        "source.fixAll.tslint": true,
+        "source.fixAll.stylelint": true,
+        "source.fixAll.prettier": true,
+        "source.fixAll": true
+      },
+      "prettier": {
+        "allowed": true
+      },
+      "format_on_save": "prettier"
+    }
   }
 }
