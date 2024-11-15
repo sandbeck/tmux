@@ -58,9 +58,6 @@
       "space b o": "pane::CloseInactiveItems",
       "space b b": "tab_switcher::Toggle",
 
-      // Comment
-      "g c": "editor::ToggleComments",
-
       // Diagnostics
       "] d": "editor::GoToDiagnostic",
       "[ d": "editor::GoToPrevDiagnostic",
